@@ -1,0 +1,1672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montelo Solar - Powering South Africa's Solar Future</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+	<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FFA500',
+                        secondary: '#003366',
+                        accent: '#00A651',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+		.hero-gradient3 {
+            background: linear-gradient(135deg, rgba(0,51,102,0.9) 0%, rgba(0,166,81,0.8) 100%);
+        }
+	    .hero-gradient2 {
+			background-image: url('background2.png'); /* change to your actual image */
+			background-size: cover;      /* makes the image fill the whole screen */
+			background-position: top; /* keeps it centered */
+			background-repeat: no-repeat; /* prevents repeating */
+			width: 100%;
+			min-height: 100vh;           /* makes section fill the full viewport height */
+		}
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(0,51,102,0.9) 0%, rgba(0,166,81,0.8) 100%);
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .provider-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+        .map-container {
+            height: 400px;
+            width: 100%;
+        }
+        .active-tab {
+            border-bottom: 3px solid #FFA500;
+            color: #FFA500;
+        }
+		  .sidenav {
+      width: 0;
+      transition: width 0.3s ease;
+    }
+    .sidenav-open {
+      width: 250px;
+    }
+	.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+
+  <!-- Navigation -->
+	  <nav class="hero-gradient3 top-0 left-0 w-full sticky z-50">
+		<div class="container mx-auto px-4 py-3 flex justify-between items-center">
+		<div class="flex items-center gap-3">
+		
+			  <!-- Logo -->
+				<div class="flex items-center justify-center">
+					<i class="fas fa-sun text-yellow-500 text-4xl"></i>
+				</div>
+			  
+			  <!-- Text -->
+			  <span class="text-xl font-bold text-white">Montelo Solar</span>
+		</div>
+		  
+		<div class="hidden md:flex space-x-8">
+			<a href="#home" class="text-white hover:text-primary transition-all">Home</a>
+			<a href="#about" class="text-white hover:text-primary transition-all">About</a>
+			<a href="#providers" class="text-white hover:text-primary transition-all">Providers</a>
+			<a href="#financing" class="text-white hover:text-primary transition-all">Financing</a>
+			<a href="#installers" class="text-white hover:text-primary transition-all">Installers</a>
+			<a href="#resources" class="text-white hover:text-primary transition-all">Resources</a>
+			<a href="#contact" class="text-white hover:text-primary transition-all">Contact</a>
+			<div class="dropdown"><button class="text-white hover:text-primary transition-all">Account <i class="fa fa-caret-down"></i></button>
+				<div class="dropdown-content">
+						<a href="profile.html" class="block px-8 py-4 hover:bg-gray-700 text-lg">Profile</a>
+						<a href="login.html" class="block px-8 py-4 hover:bg-gray-700 text-lg">login</a>
+						<a href="Register.html" class="block px-8 py-4 hover:bg-gray-700 text-white">Register</a>
+				</div>
+			</div>
+		</div>
+		  
+		  
+		  <div class="md:hidden">
+			<button id="menu-toggle" class="text-gray-700 focus:outline-none">
+			  <i class="fas fa-bars text-2xl"></i>
+			</button>
+		  </div>
+		</div>
+
+	<!-- Mobile menu -->
+		<div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+				  <a href="#home" class="block py-2 text-gray-700 hover:text-primary">Home</a>
+				  <a href="#about" class="block py-2 text-gray-700 hover:text-primary">About</a>
+				  <a href="#providers" class="block py-2 text-gray-700 hover:text-primary">Providers</a>
+				  <a href="#financing" class="block py-2 text-gray-700 hover:text-primary">Financing</a>
+				  <a href="#installers" class="block py-2 text-gray-700 hover:text-primary">Installers</a>
+				  <a href="#resources" class="block py-2 text-gray-700 hover:text-primary">Resources</a>
+				  <a href="#contact" class="block py-2 text-gray-700 hover:text-primary">Contact</a>
+				  <a href="#" onclick="openNav()" class="block py-2 text-gray-700 hover:text-primary">Dashboard</a>
+		</div>
+  </nav>
+  
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient2 text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+			<br><br><br>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 text-secondary">Find, Compare & Switch to Trusted Solar Solutions in South Africa</h1>
+                <p class="text-xl mb-8 text-secondary">Montelo Solar connects you with reliable solar providers, financing options, and certified installers across Mzansi.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <button class="hero-gradient hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition-all">
+                        Compare Providers
+                    </button>
+                </div>
+            </div>
+            <!--div class="md:w-1/2 flex justify-center">
+            </div-->
+			
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">How Montelo Solar Works</h2>
+    <p class="text-center text-gray-600 mb-12">
+      Discover how Montelo Solar helps you find the best solar solutions quickly and easily.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Card 1 -->
+      <div class="bg-gray-100 p-6 rounded-lg shadow-md border border-gray-200">
+        <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+          <i class="fas fa-search text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-center mb-3">Browse Verified Providers</h3>
+        <p class="text-gray-700 text-center">
+          Explore our network of trusted solar companies across South Africa, all vetted for quality and reliability.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-gray-100 p-6 rounded-lg shadow-md border border-gray-200">
+        <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+          <i class="fas fa-balance-scale text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-center mb-3">Compare Prices & Features</h3>
+        <p class="text-gray-700 text-center">
+          Easily compare different solar solutions side-by-side to find the perfect fit for your home or business.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-gray-100 p-6 rounded-lg shadow-md border border-gray-200">
+        <div class="bg-yellow-500 text-white w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+          <i class="fas fa-handshake text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-center mb-3">Request Quotes or Get Connected</h3>
+        <p class="text-gray-700 text-center">
+          Contact providers directly or let us connect you with the best solar experts in your area.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <!-- Featured Solar Companies Section -->
+<section class="py-16 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Featured Solar Companies</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+	
+      <!-- Provider Card 1 -->
+      <div class="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200">
+        <img src="account.png" alt="SunPower SA" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-2">
+            <h3 class="text-xl font-semibold">SunPower SA</h3>
+            <div class="flex items-center text-yellow-400">
+              <i class="fas fa-star"></i>
+              <span class="ml-1 text-gray-700">4.8</span>
+            </div>
+          </div>
+          <p class="text-gray-600 mb-4">
+            Specializing in residential solar solutions across Gauteng and Western Cape.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Panels</span>
+            <span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Batteries</span>
+            <span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Installation</span>
+          </div>
+          <button class="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded transition-all">
+            View Profile
+          </button>
+        </div>
+      </div>
+
+      <!-- Provider Card 2 -->
+      <div class="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200">
+        <img src="account.png" alt="EcoEnergy Africa" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-2">
+            <h3 class="text-xl font-semibold">EcoEnergy Africa</h3>
+            <div class="flex items-center text-yellow-400">
+              <i class="fas fa-star"></i>
+              <span class="ml-1 text-gray-700">4.6</span>
+            </div>
+          </div>
+          <p class="text-gray-600 mb-4">
+            Commercial solar solutions with financing options nationwide.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Commercial</span>
+            <span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Financing</span>
+            <span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Maintenance</span>
+          </div>
+          <button class="w-full bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded transition-all">
+            View Profile
+          </button>
+        </div>
+      </div>
+
+      <!-- Provider Card 3 -->
+      <div class="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200">
+        <img src="account.png" alt="Mzansi Solar Solutions" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-2">
+            <h3 class="text-xl font-semibold">Mzansi Solar Solutions</h3>
+            <div class="flex items-center text-yellow-400">
+              <i class="fas fa-star"></i>
+              <span class="ml-1 text-gray-700">4.9</span>
+            </div>
+          </div>
+          <p class="text-gray-600 mb-4">
+            Affordable solar solutions for townships and rural areas.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Residential</span>
+            <span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Townships</span>
+            <span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Budget</span>
+          </div>
+          <button class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-medium py-2 px-4 rounded transition-all">
+            View Profile
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-10">
+      <button class="bg-blue-700 hover:bg-blue-900 text-white font-bold py-3 px-8 rounded-lg transition-all">
+        View All Providers
+      </button>
+    </div>
+  </div>
+</section>
+
+    <!-- Why Montelo Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-secondary mb-12">Why Choose Montelo Solar?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="flex flex-col items-center text-center p-6">
+                    <div class="bg-accent text-white w-20 h-20 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-map-marker-alt text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">SA-Based</h3>
+                    <p class="text-gray-600">We're proudly South African, understanding the unique energy challenges facing our country.</p>
+                </div>
+                <div class="flex flex-col items-center text-center p-6">
+                    <div class="bg-accent text-white w-20 h-20 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-handshake text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">BBBEE-Friendly</h3>
+                    <p class="text-gray-600">We support and promote transformation in the solar energy sector.</p>
+                </div>
+                <div class="flex flex-col items-center text-center p-6">
+                    <div class="bg-accent text-white w-20 h-20 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-shield-alt text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Trusted Network</h3>
+                    <p class="text-gray-600">All providers are vetted to ensure quality service and reliable solar solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl font-bold text-secondary mb-6">Born in South Africa, Built for Change</h2>
+                    <p class="text-gray-600 mb-4">Montelo Solar was founded in 2023 by a team of South African energy enthusiasts who saw the need for a transparent, accessible platform to connect homeowners and businesses with reliable solar solutions.</p>
+                    <p class="text-gray-600 mb-6">Our mission is to empower South Africans to take control of their energy needs while supporting the growth of local solar businesses and driving awareness in both urban and rural communities.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-primary text-white rounded-full p-2 mr-4">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Empowering SA Homes & Businesses</h4>
+                                <p class="text-gray-600 text-sm">Helping you find the right solar solution for your needs and budget.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-primary text-white rounded-full p-2 mr-4">
+                                <i class="fas fa-solar-panel"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Supporting Local Solar Providers</h4>
+                                <p class="text-gray-600 text-sm">Creating opportunities for South African solar businesses to grow.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-primary text-white rounded-full p-2 mr-4">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Driving Awareness Nationwide</h4>
+                                <p class="text-gray-600 text-sm">Educating communities about the benefits of solar energy.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <img src="person.jpg" alt="Founder" class="w-full rounded-lg mb-4">
+                        <h3 class="text-xl font-semibold text-secondary mb-2">Meet Our Founder</h3>
+                        <p class="text-gray-600 mb-4">"After experiencing firsthand the challenges of finding reliable solar solutions in South Africa, I knew there had to be a better way. Montelo Solar was born from a passion to make clean energy accessible to all South Africans."</p>
+                        <p class="font-medium">- Yolwando Mdletye, Founder & CEO</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solar Providers Section -->
+    <section id="providers" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-secondary mb-6">Find & Compare Solar Providers</h2>
+            <p class="text-center text-gray-600 mb-10 max-w-2xl mx-auto">Browse our network of trusted solar companies across South Africa. Compare prices, services, and customer reviews to find your perfect match.</p>
+            
+            <div class="bg-gray-50 rounded-lg p-6 mb-10">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div>
+                        <label class="block text-gray-700 text-sm font-medium mb-2">Location</label>
+                        <select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                            <option>All Provinces</option>
+                            <option>Gauteng</option>
+                            <option>Western Cape</option>
+                            <option>KwaZulu-Natal</option>
+                            <option>Eastern Cape</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 text-sm font-medium mb-2">Services</label>
+                        <select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                            <option>All Services</option>
+                            <option>Residential Solar</option>
+                            <option>Commercial Solar</option>
+                            <option>Solar Water Heating</option>
+                            <option>Battery Storage</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 text-sm font-medium mb-2">Price Range</label>
+                        <select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                            <option>All Prices</option>
+                            <option>Under R20,000</option>
+                            <option>R20,000 - R50,000</option>
+                            <option>R50,000 - R100,000</option>
+                            <option>Over R100,000</option>
+                        </select>
+                    </div>
+                    <div class="flex items-end">
+                        <button class="w-full bg-primary hover:bg-orange-600 text-white font-medium py-2 px-4 rounded transition-all">
+                            Search Providers
+                        </button>
+                    </div>
+                </div>
+            </div>
+			
+	<!--first container-->
+    <section class="py-20 bg-white">
+		<div class="container mx-auto px-6">
+			<h2 class="text-3xl font-bold text-center text-secondary mb-6">Find & Compare Solar Providers</h2>
+
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+				<div class="bg-white rounded-lg overflow-hidden shadow-md transition-all hover:shadow-lg">
+					<div class="p-4 bg-yellow-600 text-white flex justify-between items-center">
+						<span class="font-medium">Elite Partner</span>
+						<i class="fas fa-crown text-yellow-300"></i>
+					</div>
+		<div class="p-6">
+					<div class="flex items-center mb-4">
+								<img src="account.png" alt="Provider Logo" class="w-12 h-12 rounded-full mr-4">
+							<div>
+								<h3 class="text-xl font-semibold">SolarTech SA</h3>
+							<div class="flex items-start">
+								<div class="bg-white text-black mr-4">
+                                    <i class="fas fa-map-marker-alt"></i>
+								</div>
+								<div>
+									<h4 class="font-semibold">Our Location</h4>
+								</div>
+							</div>
+							</div>
+					</div><br>
+						<div class="flex items-center text-yellow-400 text-sm">
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star-half-alt"></i>
+							<span class="ml-1 text-gray-700">4.8 (128)</span>
+						</div>
+				<p class="text-gray-600 mb-4">High-end residential and commercial solar installations using premium components.</p>
+        <div class="mb-4 text-sm text-gray-700">
+				  <p><strong>Service Areas:</strong> Gauteng, Western Cape</p>
+				  <p><strong>Avg. Response Time:</strong> 24 hours</p>
+				  <p><strong>Years in Business:</strong> 8 years</p>
+			</div>
+			    <button 
+					onclick="showDashboardView('SolarTech SA','info@solartechsa.co.za','Premium Tier',['Solar', 'solar', 'solar'])"
+					class="w-full bg-orange-600 hover:bg-orange-700 text-white font-medium py-2 px-4 rounded transition-all mt-2">
+					View Info
+				</button>
+        </div>
+      </div>
+	  
+	  <!--second-->
+	  <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all hover:shadow-lg">
+			  <div class="p-4 bg-gray-600 text-white flex justify-between items-center">
+				<span class="font-medium">Standard Partner</span>
+				<i class="fas fa-crown text-yellow-300"></i>
+			  </div>
+			<div class="p-6">
+				<div class="flex items-center mb-4">
+				  <img src="account.png" alt="Provider Logo" class="w-12 h-12 rounded-full mr-4">
+				  <div>
+					<h3 class="text-xl font-semibold">SolarTech SA</h3>
+					<div class="flex items-start">
+					  <div class="bg-white text-black mr-4">
+						<i class="fas fa-map-marker-alt"></i>
+					  </div>
+					  <div>
+						<h4 class="font-semibold">Gauteng</h4>
+					  </div>
+					</div>
+				  </div>
+				</div><br>
+			<div class="flex items-center text-yellow-400 text-sm">
+				  <i class="fas fa-star"></i>
+				  <i class="fas fa-star"></i>
+				  <i class="fas fa-star"></i>
+				  <i class="fas fa-star"></i>
+				  <i class="fas fa-star-half-alt"></i>
+				  <span class="ml-1 text-gray-700">4.7 (128)</span>
+			</div>
+				<p class="text-gray-600 mb-4">High-end residential and commercial solar installations using premium components.</p>
+			<div class="mb-4 text-sm text-gray-700">
+				  <p><strong>Service Areas:</strong> Gauteng, Western Cape</p>
+				  <p><strong>Avg. Response Time:</strong> 24 hours</p>
+				  <p><strong>Years in Business:</strong> 8 years</p>
+			</div>
+				<button 
+					onclick="showDashboardView('SolarTech SA','info@solartechsa.co.za','Premium Tier',['Residential Solar', 'Battery Storage', 'Maintenance'])"
+					class="w-full bg-orange-600 hover:bg-orange-700 text-white font-medium py-2 px-4 rounded transition-all mt-2">
+					View Info
+				</button>
+			</div>
+		</div>
+	  
+	  <!--third-->
+	  <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all hover:shadow-lg">
+			  <div class="p-4 bg-blue-600 text-white flex justify-between items-center">
+				<span class="font-medium">Standard Partner</span>
+				<i class="fas fa-crown text-yellow-300"></i>
+			  </div>
+			<div class="p-6">
+				<div class="flex items-center mb-4">
+				  <img src="account.png" alt="Provider Logo" class="w-12 h-12 rounded-full mr-4">
+				  <div>
+					<h3 class="text-xl font-semibold">SolarTech SA</h3>
+					<div class="flex items-start">
+					  <div class="bg-white text-black mr-4">
+						<i class="fas fa-map-marker-alt"></i>
+					  </div>
+					  <div>
+						<h4 class="font-semibold">Gauteng</h4>
+					  </div>
+					</div>
+				  </div>
+				</div><br>
+			<div class="flex items-center text-yellow-400 text-sm">
+				  <i class="fas fa-star"></i>
+				  <i class="fas fa-star"></i>
+				  <i class="fas fa-star"></i>
+				  <i class="fas fa-star"></i>
+				  <i class="fas fa-star-half-alt"></i>
+				  <span class="ml-1 text-gray-700">4.7 (128)</span>
+			</div>
+				<p class="text-gray-600 mb-4">High-end residential and commercial solar installations using premium components.</p>
+			<div class="mb-4 text-sm text-gray-700">
+				  <p><strong>Service Areas:</strong> Gauteng, Western Cape</p>
+				  <p><strong>Avg. Response Time:</strong> 24 hours</p>
+				  <p><strong>Years in Business:</strong> 8 years</p>
+			</div>
+				<button 
+					onclick="showDashboardView('SolarTech SA','info@solartechsa.co.za','Premium Tier',['Residential Solar', 'Battery Storage', 'Maintenance'])"
+					class="w-full bg-orange-600 hover:bg-orange-700 text-white font-medium py-2 px-4 rounded transition-all mt-2">
+					View Info
+				</button>
+			</div>
+		</div>
+
+	<!--fourth-->
+		<div class="bg-white rounded-lg overflow-hidden shadow-md transition-all hover:shadow-lg">
+			  <div class="p-4 bg-yellow-600 text-white flex justify-between items-center">
+				<span class="font-medium">Standard Partner</span>
+				<i class="fas fa-crown text-yellow-300"></i>
+			  </div>
+			<div class="p-6">
+				<div class="flex items-center mb-4">
+				  <img src="account.png" alt="Provider Logo" class="w-12 h-12 rounded-full mr-4">
+				  <div>
+					<h3 class="text-xl font-semibold">SolarTech SA</h3>
+					<div class="flex items-start">
+					  <div class="bg-white text-black mr-4">
+						<i class="fas fa-map-marker-alt"></i>
+					  </div>
+					  <div>
+						<h4 class="font-semibold">Gauteng</h4>
+					  </div>
+					</div>
+				  </div>
+				</div><br>
+			<div class="flex items-center text-yellow-400 text-sm">
+				  <i class="fas fa-star"></i>
+				  <i class="fas fa-star"></i>
+				  <i class="fas fa-star"></i>
+				  <i class="fas fa-star"></i>
+				  <i class="fas fa-star-half-alt"></i>
+				  <span class="ml-1 text-gray-700">4.7 (128)</span>
+			</div>
+				<p class="text-gray-600 mb-4">High-end residential and commercial solar installations using premium components.</p>
+			<div class="mb-4 text-sm text-gray-700">
+				  <p><strong>Service Areas:</strong> Gauteng, Western Cape</p>
+				  <p><strong>Avg. Response Time:</strong> 24 hours</p>
+				  <p><strong>Years in Business:</strong> 8 years</p>
+			</div>
+				<button 
+					onclick="showDashboardView('SolarTech SA','info@solartechsa.co.za','Premium Tier',['Residential Solar', 'Battery Storage', 'Maintenance'])"
+					class="w-full bg-orange-600 hover:bg-orange-700 text-white font-medium py-2 px-4 rounded transition-all mt-2">
+					View Info
+				</button>
+			</div>
+		</div>
+	  
+	<!--firth-->
+		<div class="bg-white rounded-lg overflow-hidden shadow-md transition-all hover:shadow-lg">
+			  <div class="p-4 bg-gray-600 text-white flex justify-between items-center">
+				<span class="font-medium">Standard Partner</span>
+				<i class="fas fa-crown text-yellow-300"></i>
+			  </div>
+			<div class="p-6">
+				<div class="flex items-center mb-4">
+				  <img src="account.png" alt="Provider Logo" class="w-12 h-12 rounded-full mr-4">
+				  <div>
+					<h3 class="text-xl font-semibold">SolarTech SA</h3>
+					<div class="flex items-start">
+					  <div class="bg-white text-black mr-4">
+						<i class="fas fa-map-marker-alt"></i>
+					  </div>
+					  <div>
+						<h4 class="font-semibold">Gauteng</h4>
+					  </div>
+					</div>
+				  </div>
+				</div><br>
+			<div class="flex items-center text-yellow-400 text-sm">
+				  <i class="fas fa-star"></i>
+				  <i class="fas fa-star"></i>
+				  <i class="fas fa-star"></i>
+				  <i class="fas fa-star"></i>
+				  <i class="fas fa-star-half-alt"></i>
+				  <span class="ml-1 text-gray-700">4.7 (128)</span>
+			</div>
+				<p class="text-gray-600 mb-4">High-end residential and commercial solar installations using premium components.</p>
+			<div class="mb-4 text-sm text-gray-700">
+				  <p><strong>Service Areas:</strong> Gauteng, Western Cape</p>
+				  <p><strong>Avg. Response Time:</strong> 24 hours</p>
+				  <p><strong>Years in Business:</strong> 8 years</p>
+			</div>
+				<button 
+					onclick="showDashboardView('SolarTech SA','info@solartechsa.co.za','Premium Tier',['Residential Solar', 'Battery Storage', 'Maintenance'])"
+					class="w-full bg-orange-600 hover:bg-orange-700 text-white font-medium py-2 px-4 rounded transition-all mt-2">
+					View Info
+				</button>
+			</div>
+		</div>
+
+	  
+	   <!--sixth-->
+	  <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all hover:shadow-lg">
+			  <div class="p-4 bg-gray-600 text-white flex justify-between items-center">
+				<span class="font-medium">Standard Partner</span>
+				<i class="fas fa-crown text-yellow-300"></i>
+			  </div>
+			<div class="p-6">
+				<div class="flex items-center mb-4">
+				  <img src="account.png" alt="Provider Logo" class="w-12 h-12 rounded-full mr-4">
+				  <div>
+					<h3 class="text-xl font-semibold">SolarTech SA</h3>
+					<div class="flex items-start">
+					  <div class="bg-white text-black mr-4">
+						<i class="fas fa-map-marker-alt"></i>
+					  </div>
+					  <div>
+						<h4 class="font-semibold">Gauteng</h4>
+					  </div>
+					</div>
+				  </div>
+				</div><br>
+			<div class="flex items-center text-yellow-400 text-sm">
+				  <i class="fas fa-star"></i>
+				  <i class="fas fa-star"></i>
+				  <i class="fas fa-star"></i>
+				  <i class="fas fa-star"></i>
+				  <i class="fas fa-star-half-alt"></i>
+				  <span class="ml-1 text-gray-700">4.7 (128)</span>
+			</div>
+				<p class="text-gray-600 mb-4">High-end residential and commercial solar installations using premium components.</p>
+			<div class="mb-4 text-sm text-gray-700">
+				  <p><strong>Service Areas:</strong> Gauteng, Western Cape</p>
+				  <p><strong>Avg. Response Time:</strong> 24 hours</p>
+				  <p><strong>Years in Business:</strong> 8 years</p>
+			</div>
+				<button 
+					onclick="showDashboardView('SolarTech SA','info@solartechsa.co.za','Premium Tier',['Residential Solar', 'Battery Storage', 'Maintenance'])"
+					class="w-full bg-orange-600 hover:bg-orange-700 text-white font-medium py-2 px-4 rounded transition-all mt-2">
+					View Info
+				</button>
+			</div>
+		</div>
+		</div>
+	</div>
+	
+<!-- Provider Info Display Section (Hidden by default) -->
+		<section id="providerDashboard" class="py-16 bg-white hidden">
+			  <h2 class="text-3xl font-bold mb-6 text-center">Provider Dashboard</h2>
+
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+		<!-- Business Info -->
+				<div class="bg-gray-50 border rounded-lg p-6 shadow">
+					  <h3 class="text-xl font-semibold mb-2">Business Info</h3>
+					  <p><strong>Name:</strong> <span id="dashName">N/A</span></p>
+					  <p><strong>Email:</strong> <span id="dashEmail">N/A</span></p>
+					  <p><strong>Status:</strong> <span id="dashStatus">N/A</span></p>
+					  <a href="#" class="text-blue-600 mt-4 inline-block">Edit Profile</a>
+				</div>
+
+		<!-- Services -->
+				<div class="bg-gray-50 border rounded-lg p-6 shadow">
+					  <h3 class="text-xl font-semibold mb-2">Manage Services</h3>
+					  <ul id="dashServices" class="list-disc pl-5 text-gray-700">
+		<!-- Will be filled dynamically -->
+					  </ul>
+					  <a href="#" class="text-blue-600 mt-4 inline-block">Update Services</a>
+				</div>
+
+		<!-- Payment -->
+				<div class="bg-gray-50 border rounded-lg p-6 shadow">
+					  <h3 class="text-xl font-semibold mb-2">Upgrade Your Tier</h3>
+					  <p class="mb-4 text-gray-600">Get featured in search, receive more leads, and unlock dashboard tools.</p>
+					  <button id="pay-btn" class="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700">
+						Upgrade to Premium (R499)
+					  </button>
+				</div>
+			</div>
+				<button onclick="document.getElementById('providerDashboard').classList.add('hidden')" class="mt-6 text-red-600 underline">
+					Close Dashboard
+				</button>
+		</section>
+	</section>
+<!--end-->
+            
+            <div class="mt-10 text-center">
+                <p class="text-gray-600 mb-4">Can't find your area? We can help connect you with providers.</p>
+                <button class="bg-secondary hover:bg-blue-900 text-white font-bold py-3 px-8 rounded-lg transition-all">
+                    Request a Custom Quote
+                </button>
+            </div>
+        </div>
+	</section>
+
+<!--profile-->
+	<section id="provider" class="hidden py-16 bg-white">
+  <h2 class="text-3xl font-bold mb-6 text-center">Provider Dashboard</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <!-- Profile Summary -->
+		<div class="bg-gray-50 border rounded-lg p-6 shadow">
+			  <h3 class="text-xl font-semibold mb-2">Business Info</h3>
+			  <p><strong>Name:</strong> SolarTech SA</p>
+			  <p><strong>Email:</strong> info@solartechsa.co.za</p>
+			  <p><strong>Status:</strong> Free Tier</p>
+			  <a href="/edit-profile.html" class="text-blue-600 mt-4 inline-block">Edit Profile</a>
+		</div>
+
+    <!-- Service Management -->
+		<div class="bg-gray-50 border rounded-lg p-6 shadow">
+			<h3 class="text-xl font-semibold mb-2">Manage Services</h3>
+			  <ul class="list-disc pl-5 text-gray-700">
+				<li>Residential Solar</li>
+				<li>Battery Storage</li>
+				<li>Maintenance</li>
+			  </ul>
+			  <a href="/manage-services.html" class="text-blue-600 mt-4 inline-block">Update Services</a>
+		</div>
+
+    <!-- Payment & Upgrade -->
+		<div class="bg-gray-50 border rounded-lg p-6 shadow">
+			  <h3 class="text-xl font-semibold mb-2">Upgrade Your Tier</h3>
+			  <p class="mb-4 text-gray-600">Get featured in search, receive more leads, and unlock dashboard tools.</p>
+
+	<!-- Yoco/Paystack Button Placeholder -->
+			  <button id="pay-btn" class="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700">
+				Upgrade to Premium (R499)
+			  </button>
+		</div>
+  </div>
+</section>
+
+    <!-- Financing Options Section -->
+    <section id="financing" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-secondary mb-6">Solar Financing Options</h2>
+            <p class="text-center text-gray-600 mb-10 max-w-2xl mx-auto">Solar power is an investment in your future. We'll help you find the right financing solution to make it affordable.</p>
+            
+            <div class="mb-10">
+                <div class="flex flex-wrap border-b border-gray-200">
+                    <button class="tab-button active-tab px-6 py-3 font-medium text-gray-700" data-tab="cash">Cash Purchase</button>
+                    <button class="tab-button px-6 py-3 font-medium text-gray-700" data-tab="loans">Bank Loans</button>
+                    <button class="tab-button px-6 py-3 font-medium text-gray-700" data-tab="green">Green Loans</button>
+                    <button class="tab-button px-6 py-3 font-medium text-gray-700" data-tab="rebates">Government Rebates</button>
+                </div>
+                
+                <div id="cash" class="tab-content p-6 bg-white rounded-b-lg shadow-md">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/2 mb-6 md:mb-0 md:pr-6">
+                            <h3 class="text-xl font-semibold text-secondary mb-4">Pay Cash for Your Solar System</h3>
+                            <p class="text-gray-600 mb-4">Paying cash for your solar installation gives you the fastest return on investment and maximum long-term savings.</p>
+                            <ul class="space-y-2 mb-4">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                    <span>Own your system outright with no ongoing payments</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                    <span>Immediate savings on your electricity bill</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                    <span>Typically 5-7 year payback period in South Africa</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                    <span>Increase your property value</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="md:w-1/2">
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="font-semibold mb-3">Cash Purchase Example</h4>
+                                <div class="space-y-3">
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">System Size:</span>
+                                        <span class="font-medium">5kW Solar System</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">Upfront Cost:</span>
+                                        <span class="font-medium">R75,000 - R95,000</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">Monthly Savings:</span>
+                                        <span class="font-medium">R1,200 - R1,800</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">Payback Period:</span>
+                                        <span class="font-medium">5-7 years</span>
+                                    </div>
+                                    <div class="flex justify-between font-semibold text-accent">
+                                        <span>20-Year Savings:</span>
+                                        <span>R250,000+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="loans" class="tab-content hidden p-6 bg-white rounded-b-lg shadow-md">
+                    <!-- Bank loans content would go here -->
+					<div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/2 mb-6 md:mb-0 md:pr-6">
+                            <h3 class="text-xl font-semibold text-secondary mb-4">Use Bank loans to pay for Your Solar System</h3>
+                            <p class="text-gray-600 mb-4">Paying cash for your solar installation gives you the fastest return on investment and maximum long-term savings.</p>
+                            <ul class="space-y-2 mb-4">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                    <span>Own your system outright with no ongoing payments</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                    <span>Immediate savings on your electricity bill</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                    <span>Typically 5-7 year payback period in South Africa</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                    <span>Increase your property value</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="md:w-1/2">
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="font-semibold mb-3">Cash Purchase Example</h4>
+                                <div class="space-y-3">
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">System Size:</span>
+                                        <span class="font-medium">5kW Solar System</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">Upfront Cost:</span>
+                                        <span class="font-medium">R75,000 - R95,000</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">Monthly Savings:</span>
+                                        <span class="font-medium">R1,200 - R1,800</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">Payback Period:</span>
+                                        <span class="font-medium">5-7 years</span>
+                                    </div>
+                                    <div class="flex justify-between font-semibold text-accent">
+                                        <span>20-Year Savings:</span>
+                                        <span>R250,000+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="green" class="tab-content hidden p-6 bg-white rounded-b-lg shadow-md">
+                    <!-- Green loans content would go here -->
+					<div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/2 mb-6 md:mb-0 md:pr-6">
+                            <h3 class="text-xl font-semibold text-secondary mb-4">Use Green loans to pay for Your Solar System</h3>
+                            <p class="text-gray-600 mb-4">Paying cash for your solar installation gives you the fastest return on investment and maximum long-term savings.</p>
+                            <ul class="space-y-2 mb-4">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                    <span>Own your system outright with no ongoing payments</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                    <span>Immediate savings on your electricity bill</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                    <span>Typically 5-7 year payback period in South Africa</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                    <span>Increase your property value</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="md:w-1/2">
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="font-semibold mb-3">Cash Purchase Example</h4>
+                                <div class="space-y-3">
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">System Size:</span>
+                                        <span class="font-medium">5kW Solar System</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">Upfront Cost:</span>
+                                        <span class="font-medium">R75,000 - R95,000</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">Monthly Savings:</span>
+                                        <span class="font-medium">R1,200 - R1,800</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">Payback Period:</span>
+                                        <span class="font-medium">5-7 years</span>
+                                    </div>
+                                    <div class="flex justify-between font-semibold text-accent">
+                                        <span>20-Year Savings:</span>
+                                        <span>R250,000+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="rebates" class="tab-content hidden p-6 bg-white rounded-b-lg shadow-md">
+                    <!-- Government rebates content would go here -->
+					<div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/2 mb-6 md:mb-0 md:pr-6">
+                            <h3 class="text-xl font-semibold text-secondary mb-4">Government rebates</h3>
+                            <p class="text-gray-600 mb-4">Paying cash for your solar installation gives you the fastest return on investment and maximum long-term savings.</p>
+                            <ul class="space-y-2 mb-4">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                    <span>Own your system outright with no ongoing payments</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                    <span>Immediate savings on your electricity bill</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                    <span>Typically 5-7 year payback period in South Africa</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                    <span>Increase your property value</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="md:w-1/2">
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="font-semibold mb-3">Cash Purchase Example</h4>
+                                <div class="space-y-3">
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">System Size:</span>
+                                        <span class="font-medium">5kW Solar System</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">Upfront Cost:</span>
+                                        <span class="font-medium">R75,000 - R95,000</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">Monthly Savings:</span>
+                                        <span class="font-medium">R1,200 - R1,800</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">Payback Period:</span>
+                                        <span class="font-medium">5-7 years</span>
+                                    </div>
+                                    <div class="flex justify-between font-semibold text-accent">
+                                        <span>20-Year Savings:</span>
+                                        <span>R250,000+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white p-8 rounded-lg shadow-md">
+                <h3 class="text-2xl font-bold text-center text-secondary mb-6">Solar Cost Estimator Tool</h3>
+                <div class="max-w-2xl mx-auto">
+                    <div class="mb-6">
+                        <label class="block text-gray-700 font-medium mb-2">What type of property are you powering?</label>
+                        <select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                            <option>Select property type</option>
+                            <option>House (Small - 2-3 bedrooms)</option>
+                            <option>House (Medium - 3-4 bedrooms)</option>
+                            <option>House (Large - 4+ bedrooms)</option>
+                            <option>Apartment/Flat</option>
+                            <option>Small Business</option>
+                            <option>Commercial Property</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="block text-gray-700 font-medium mb-2">Current monthly electricity bill</label>
+                        <div class="relative">
+                            <span class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">R</span>
+                            <input type="number" placeholder="e.g. 1500" class="w-full pl-8 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="block text-gray-700 font-medium mb-2">Location</label>
+                        <select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                            <option>Select your province</option>
+                            <option>Gauteng</option>
+                            <option>Western Cape</option>
+                            <option>KwaZulu-Natal</option>
+                            <option>Eastern Cape</option>
+                            <option>Free State</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="block text-gray-700 font-medium mb-2">Do you want battery backup for load shedding?</label>
+                        <div class="flex space-x-4">
+                            <label class="inline-flex items-center">
+                                <input type="radio" class="form-radio text-primary" name="battery" checked>
+                                <span class="ml-2">Yes</span>
+                            </label>
+                            <label class="inline-flex items-center">
+                                <input type="radio" class="form-radio text-primary" name="battery">
+                                <span class="ml-2">No</span>
+                            </label>
+                            <label class="inline-flex items-center">
+                                <input type="radio" class="form-radio text-primary" name="battery">
+                                <span class="ml-2">Not sure</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button class="bg-primary hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg transition-all">
+                            Calculate Estimated Cost
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16">
+                <h3 class="text-2xl font-bold text-center text-secondary mb-8">Our Financial Partners</h3>
+                <div class="flex flex-wrap justify-center items-center gap-8">
+                    <img src="absa.png" alt="Bank Logo" class="h-12 opacity-70 hover:opacity-100 transition-all">
+                    <img src="capitec.png" alt="Bank Logo" class="h-12 opacity-70 hover:opacity-100 transition-all">
+                    <img src="nedbank.png" alt="Bank Logo" class="h-12 opacity-70 hover:opacity-100 transition-all">
+                    <img src="fnb.png" alt="Bank Logo" class="h-12 opacity-70 hover:opacity-100 transition-all">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Installation Services Section -->
+    <section id="installers" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-secondary mb-6">Find Certified Solar Installers</h2>
+            <p class="text-center text-gray-600 mb-10 max-w-2xl mx-auto">Professional installation is crucial for optimal performance and safety. Connect with certified solar installers in your area.</p>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16">
+                <div>
+                    <h3 class="text-xl font-semibold text-secondary mb-4">Our Installer Network</h3>
+                    <p class="text-gray-600 mb-6">All installers in our network are certified and vetted to ensure they meet South African quality and safety standards.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-accent text-white rounded-full p-2 mr-4">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Certified Professionals</h4>
+                                <p class="text-gray-600 text-sm">All installers hold relevant certifications and licenses.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-accent text-white rounded-full p-2 mr-4">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Quality Workmanship</h4>
+                                <p class="text-gray-600 text-sm">We verify past work and customer satisfaction.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-accent text-white rounded-full p-2 mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Nationwide Coverage</h4>
+                                <p class="text-gray-600 text-sm">Installers available across all provinces.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="map-container bg-gray-200 rounded-lg overflow-hidden">
+                        <!-- Google Map would be embedded here -->
+                        <img src="map.png" alt="South Africa Map" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gray-50 p-8 rounded-lg shadow-md max-w-3xl mx-auto">
+                <h3 class="text-2xl font-bold text-center text-secondary mb-6">Request an Installer</h3>
+                <form>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Your Name</label>
+                            <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Email Address</label>
+                            <input type="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                            <input type="tel" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Location</label>
+                            <select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                                <option>Select your province</option>
+                                <option>Gauteng</option>
+                                <option>Western Cape</option>
+                                <option>KwaZulu-Natal</option>
+                                <option>Eastern Cape</option>
+                                <option>Free State</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-gray-700 font-medium mb-2">Installation Details</label>
+                            <textarea rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Tell us about your solar project..."></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 text-center">
+                        <button class="bg-primary hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg transition-all">
+                            Request Installer
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="mt-16">
+                <h3 class="text-2xl font-bold text-center text-secondary mb-6">Tips for Safe, Legal Installations in SA</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <div class="bg-secondary text-white w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h4 class="font-semibold text-lg mb-2">Municipal Compliance</h4>
+                        <p class="text-gray-600">Understand your local municipality's requirements for solar installations, including necessary permits and inspections.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <div class="bg-secondary text-white w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h4 class="font-semibold text-lg mb-2">Eskom Regulations</h4>
+                        <p class="text-gray-600">For grid-tied systems, ensure compliance with Eskom's technical requirements for connecting to the national grid.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <div class="bg-secondary text-white w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h4 class="font-semibold text-lg mb-2">Homeowners Association</h4>
+                        <p class="text-gray-600">If you live in an estate or complex, check your HOA rules regarding solar panel installation and placement.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog/Resource Hub Section -->
+    <section id="resources" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-secondary mb-6">Solar Resources for South Africans</h2>
+            <p class="text-center text-gray-600 mb-10 max-w-2xl mx-auto">Educating homeowners and businesses about solar energy in plain, relatable language.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <!-- Blog Post 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all hover:shadow-lg">
+                    <img src="table.png" alt="Blog Post" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <span>May 15, 2023</span>
+                            <span class="mx-2">•</span>
+                            <span>5 min read</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Is Solar Worth It in Cape Town?</h3>
+                        <p class="text-gray-600 mb-4">Analyzing the costs, savings, and practical considerations of going solar in the Mother City.</p>
+                        <a href="#" class="text-primary font-medium hover:underline">Read More</a>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all hover:shadow-lg">
+                    <img src="table.png" alt="Blog Post" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <span>April 28, 2023</span>
+                            <span class="mx-2">•</span>
+                            <span>7 min read</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Financing Your Solar Journey in SA</h3>
+                        <p class="text-gray-600 mb-4">A complete guide to the different ways you can afford solar power in South Africa.</p>
+                        <a href="#" class="text-primary font-medium hover:underline">Read More</a>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all hover:shadow-lg">
+                    <img src="table.png" alt="Blog Post" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <span>April 10, 2023</span>
+                            <span class="mx-2">•</span>
+                            <span>4 min read</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">What to Know Before You Install</h3>
+                        <p class="text-gray-600 mb-4">10 crucial questions to ask before committing to a solar installation in South Africa.</p>
+                        <a href="#" class="text-primary font-medium hover:underline">Read More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <button class="bg-secondary hover:bg-blue-900 text-white font-bold py-3 px-8 rounded-lg transition-all">
+                    View All Resources
+                </button>
+            </div>
+            
+            <div class="mt-16">
+                <h3 class="text-2xl font-bold text-center text-secondary mb-8">Popular Topics</h3>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <a href="#" class="bg-white hover:bg-gray-100 text-gray-800 font-medium py-2 px-4 rounded-full shadow-sm transition-all">
+                        Load Shedding Solutions
+                    </a>
+                    <a href="#" class="bg-white hover:bg-gray-100 text-gray-800 font-medium py-2 px-4 rounded-full shadow-sm transition-all">
+                        Solar for Townships
+                    </a>
+                    <a href="#" class="bg-white hover:bg-gray-100 text-gray-800 font-medium py-2 px-4 rounded-full shadow-sm transition-all">
+                        Battery Storage
+                    </a>
+                    <a href="#" class="bg-white hover:bg-gray-100 text-gray-800 font-medium py-2 px-4 rounded-full shadow-sm transition-all">
+                        Solar Water Heaters
+                    </a>
+                    <a href="#" class="bg-white hover:bg-gray-100 text-gray-800 font-medium py-2 px-4 rounded-full shadow-sm transition-all">
+                        Commercial Solar
+                    </a>
+                    <a href="#" class="bg-white hover:bg-gray-100 text-gray-800 font-medium py-2 px-4 rounded-full shadow-sm transition-all">
+                        Maintenance Tips
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Member Area Section -->
+    <section id="register" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-gradient-to-r from-secondary to-primary rounded-xl overflow-hidden shadow-xl">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/2 p-8 text-white">
+                        <h2 class="text-2xl font-bold mb-4">For Solar Businesses</h2>
+                        <p class="mb-6">Join our network of trusted solar providers and connect with customers looking for your services.</p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle mt-1 mr-2"></i>
+                                <span>Create your company profile</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle mt-1 mr-2"></i>
+                                <span>List your products and services</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle mt-1 mr-2"></i>
+                                <span>Receive and respond to quote requests</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle mt-1 mr-2"></i>
+                                <span>Grow your business with Montelo Solar</span>
+                            </li>
+                        </ul>
+                    </div>
+	<!--register-->
+                    <div id="register" class="md:w-1/2 bg-white p-8">
+                        <h3 class="text-xl font-semibold text-secondary mb-4">Register Your Business</h3>
+                        <form>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-medium mb-2">Company Name</label>
+                                <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-medium mb-2">Contact Person</label>
+                                <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-medium mb-2">Phone Number</label>
+                                <input type="tel" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-medium mb-2">Email address</label>
+                                <input type="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"required>
+                            </div>
+							<div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-medium mb-2">Password</label>
+                                <input type="tel" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"required>
+                            </div>
+							<div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-medium mb-2">Retype Password</label>
+                                <input type="tel" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-medium mb-2">Services Offered</label>
+                                <select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" required>
+                                    <option>Select services</option>
+                                    <option>Residential Solar</option>
+                                    <option>Commercial Solar</option>
+                                    <option>Solar Water Heating</option>
+                                    <option>Battery Storage</option>
+                                    <option>Installation Services</option>
+                                    <option>Multiple Services</option>
+                                </select>
+                            </div>
+                            <button class="w-full bg-accent hover:bg-green-700 text-white font-bold py-3 px-4 rounded transition-all">
+                                Register Now
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</section>
+	
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-secondary mb-6">Contact Montelo Solar</h2>
+            <p class="text-center text-gray-600 mb-10 max-w-2xl mx-auto">We're proudly South African and here to help with all your solar energy questions.</p>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <div>
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold text-secondary mb-6">Send Us a Message</h3>
+                        <form>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-medium mb-2">Your Name</label>
+                                <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-medium mb-2">Email Address</label>
+                                <input type="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-medium mb-2">Phone Number</label>
+                                <input type="tel" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-medium mb-2">Subject</label>
+                                <select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"required>
+                                    <option>Select a subject</option>
+                                    <option>General Inquiry</option>
+                                    <option>Provider Information</option>
+                                    <option>Financing Questions</option>
+                                    <option>Installation Help</option>
+                                    <option>Business Registration</option>
+                                </select>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-medium mb-2">Message</label>
+                                <textarea rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                            </div>
+                            <button class="w-full bg-primary hover:bg-orange-600 text-white font-bold py-3 px-4 rounded transition-all">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="bg-white p-8 rounded-lg shadow-md h-full">
+                        <h3 class="text-xl font-semibold text-secondary mb-6">Get in Touch</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-primary text-white rounded-full p-3 mr-4">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Our Location</h4>
+                                    <p class="text-gray-600">123 Solar Street, Sandton<br>Johannesburg, Gauteng<br>South Africa</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-primary text-white rounded-full p-3 mr-4">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Call Us</h4>
+                                    <p class="text-gray-600">+27 11 123 4567<br>Mon-Fri: 8am - 5pm</p>
+                                    <button class="mt-2 bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-full transition-all flex items-center">
+                                        <i class="fab fa-whatsapp mr-2"></i> Chat on WhatsApp
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-primary text-white rounded-full p-3 mr-4">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Email Us</h4>
+                                    <p class="text-gray-600">info@montelosolar.co.za<br>support@montelosolar.co.za</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-primary text-white rounded-full p-3 mr-4">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Follow Us</h4>
+                                    <div class="flex space-x-4 mt-2">
+                                        <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                        <a href="#" class="bg-pink-600 hover:bg-pink-700 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                        <a href="#" class="bg-blue-400 hover:bg-blue-500 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                        <a href="#" class="bg-gray-800 hover:bg-black text-white w-10 h-10 rounded-full flex items-center justify-center transition-all">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="https://via.placeholder.com/50x50" alt="Montelo Solar Logo" class="h-10 mr-3">
+                        <span class="text-xl font-bold">Montelo Solar</span>
+                    </div>
+                    <p class="mb-4">Powering South Africa's solar future with trusted solutions and transparent information.</p>
+                    <div class="flex items-center">
+                        <img src="https://via.placeholder.com/100x40" alt="Proudly SA" class="h-10 mr-2">
+                        <span class="text-sm">Proudly South African</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-primary transition-all">Home</a></li>
+                        <li><a href="#about" class="hover:text-primary transition-all">About Us</a></li>
+                        <li><a href="#providers" class="hover:text-primary transition-all">Solar Providers</a></li>
+                        <li><a href="#financing" class="hover:text-primary transition-all">Financing Options</a></li>
+                        <li><a href="#installers" class="hover:text-primary transition-all">Installation Services</a></li>
+                        <li><a href="#resources" class="hover:text-primary transition-all">Resources</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">For Businesses</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-primary transition-all">List Your Business</a></li>
+                        <li><a href="#" class="hover:text-primary transition-all">Create Profile</a></li>
+                        <li><a href="#" class="hover:text-primary transition-all">Pricing Plans</a></li>
+                        <li><a href="#" class="hover:text-primary transition-all">Login</a></li>
+                        <li><a href="#" class="hover:text-primary transition-all">Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-primary transition-all">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-primary transition-all">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-primary transition-all">POPIA Compliance</a></li>
+                        <li><a href="#" class="hover:text-primary transition-all">Cookie Policy</a></li>
+                        <li><a href="#" class="hover:text-primary transition-all">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-6 border-t border-gray-700">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-sm mb-4 md:mb-0">© 2023 Montelo Solar. All rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="hover:text-primary transition-all">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="hover:text-primary transition-all">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="hover:text-primary transition-all">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="hover:text-primary transition-all">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Tab functionality for financing section
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons and contents
+                tabButtons.forEach(btn => btn.classList.remove('active-tab'));
+                tabContents.forEach(content => content.classList.add('hidden'));
+                
+                // Add active class to clicked button
+                button.classList.add('active-tab');
+                
+                // Show corresponding content
+                const tabId = button.getAttribute('data-tab');
+                document.getElementById(tabId).classList.remove('hidden');
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Simple animation for provider cards on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeIn');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.provider-card, .feature-card').forEach(card => {
+            observer.observe(card);
+            card.classList.add('opacity-0', 'transition-all', 'duration-500');
+            card.classList.add('animate-fadeIn');
+        });
+		
+		//navigation bar
+		function openNav() {
+		  document.getElementById("sideNav").classList.add("sidenav-open");
+		}
+		function closeNav() {
+		  document.getElementById("sideNav").classList.remove("sidenav-open");
+		}
+
+		// Mobile menu toggle
+		document.getElementById("menu-toggle").addEventListener("click", function () {
+		  const menu = document.getElementById("mobile-menu");
+		  menu.classList.toggle("hidden");
+		});
+		
+		//for provider information
+		function showDashboardView(name, email, status, servicesArray) {
+		document.getElementById('dashName').textContent = name;
+		document.getElementById('dashEmail').textContent = email;
+		document.getElementById('dashStatus').textContent = status;
+
+		const servicesList = document.getElementById('dashServices');
+		servicesList.innerHTML = ''; // Clear old items
+		servicesArray.forEach(service => {
+		  const li = document.createElement('li');
+		  li.textContent = service;
+		  servicesList.appendChild(li);
+		});
+
+		document.getElementById('providerDashboard').classList.remove('hidden');
+		document.getElementById('providerDashboard').scrollIntoView({ behavior: 'smooth' });
+	  }
+</script>
+    </script>
+</body>
+</html>

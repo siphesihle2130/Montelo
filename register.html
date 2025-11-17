@@ -1,0 +1,285 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montelo Solar - Powering South Africa's Solar Future</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+	<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FFA500',
+                        secondary: '#003366',
+                        accent: '#00A651',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+		.hero-gradient3 {
+            background: linear-gradient(135deg, rgba(0,51,102,0.9) 0%, rgba(0,166,81,0.8) 100%);
+        }
+	    .hero-gradient4 {
+			background-image: url('reg.png'); /* change to your actual image */
+			background-size: cover;      /* makes the image fill the whole screen */
+			background-position: top; /* keeps it centered */
+			background-repeat: no-repeat; /* prevents repeating */
+			width: 100%;
+			min-height: 100vh;           /* makes section fill the full viewport height */
+		}
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(0,51,102,0.9) 0%, rgba(0,166,81,0.8) 100%);
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .provider-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+        .map-container {
+            height: 400px;
+            width: 100%;
+        }
+        .active-tab {
+            border-bottom: 3px solid #FFA500;
+            color: #FFA500;
+        }
+		  .sidenav {
+      width: 0;
+      transition: width 0.3s ease;
+    }
+    .sidenav-open {
+      width: 250px;
+    }
+	.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+ 
+  
+  <!-- Member Area Section -->
+    <section id="register" class="py-16 bg-gray">
+        <div class="container mx-auto px-4">
+            <div class="hero-gradient4 max-w-4xl mx-auto from-secondary to-primary rounded-xl overflow-hidden shadow-xl">
+                <div class="flex flex-col md:flex-row">
+				
+					<div class="md:w-1/2 p-8 flex flex-col text-white justify-center">
+
+					<a href="index.html"> <img src="arrow_back.png" class="w-7 h-7 absolute left-4 top-4"></a>
+                        <h1 class="text-5xl font-bold mb-4">Hello!</h1>
+                        <p class="mb-6">Join our network of trusted solar providers and connect with service providers.</p>
+					<button> <a href="login.html" class="hero-gradient hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition-all">Login</a></button>
+                        <ul class="space-y-3 mb-6">
+                        </ul>
+                    </div>
+	<!--register-->
+                    <div id="register" class="md:w-1/2 bg-white p-8">
+					<h1 class="text-3xl font-bold mb-4">Register!</h1>
+                        <form>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-medium mb-2">First Name</label>
+                                <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-medium mb-2">Last Name</label>
+                                <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-medium mb-2">Phone Number</label>
+                                <input type="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-medium mb-2">Email Address</label>
+                                <input type="tel" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"required>
+                            </div>
+							<div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-medium mb-2"><b>Home Address</b></label>
+                            </div>
+							<div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-medium mb-2">Country</label>
+                                <input type="tel" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"required>
+                            </div>
+							<div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-medium mb-2">City</label>
+                                <input type="tel" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"required>
+                            </div>
+							<div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-medium mb-2">Street</label>
+                                <input type="tel" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"required>
+                            </div>
+							<div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-medium mb-2">Password</label>
+                                <input type="tel" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"required>
+                            </div>
+							<div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-medium mb-2">Retype Password</label>
+                                <input type="tel" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"required>
+                            </div>
+                            <button class="w-full bg-accent hover:bg-green-700 text-white font-bold py-3 px-4 rounded transition-all">
+                                Register Now
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</section>
+	<script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Tab functionality for financing section
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons and contents
+                tabButtons.forEach(btn => btn.classList.remove('active-tab'));
+                tabContents.forEach(content => content.classList.add('hidden'));
+                
+                // Add active class to clicked button
+                button.classList.add('active-tab');
+                
+                // Show corresponding content
+                const tabId = button.getAttribute('data-tab');
+                document.getElementById(tabId).classList.remove('hidden');
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Simple animation for provider cards on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeIn');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.provider-card, .feature-card').forEach(card => {
+            observer.observe(card);
+            card.classList.add('opacity-0', 'transition-all', 'duration-500');
+            card.classList.add('animate-fadeIn');
+        });
+		
+		//navigation bar
+		function openNav() {
+		  document.getElementById("sideNav").classList.add("sidenav-open");
+		}
+		function closeNav() {
+		  document.getElementById("sideNav").classList.remove("sidenav-open");
+		}
+
+		// Mobile menu toggle
+		document.getElementById("menu-toggle").addEventListener("click", function () {
+		  const menu = document.getElementById("mobile-menu");
+		  menu.classList.toggle("hidden");
+		});
+		
+		//for provider information
+		function showDashboardView(name, email, status, servicesArray) {
+		document.getElementById('dashName').textContent = name;
+		document.getElementById('dashEmail').textContent = email;
+		document.getElementById('dashStatus').textContent = status;
+
+		const servicesList = document.getElementById('dashServices');
+		servicesList.innerHTML = ''; // Clear old items
+		servicesArray.forEach(service => {
+		  const li = document.createElement('li');
+		  li.textContent = service;
+		  servicesList.appendChild(li);
+		});
+
+		document.getElementById('providerDashboard').classList.remove('hidden');
+		document.getElementById('providerDashboard').scrollIntoView({ behavior: 'smooth' });
+	  }
+</script>
+    </script>
+</body>
+</html>
